@@ -19,10 +19,8 @@ def preprocess_image_from_base64(b64data: str) -> np.ndarray:
     img_bytes = base64.b64decode(match.group(1))
     img = Image.open(io.BytesIO(img_bytes)).convert('L')
 
-    # Invert warna: digit hitam -> putih seperti MNIST
     img = ImageOps.invert(img)
 
-    # Ubah ke numpy array untuk cropping
     arr = np.array(img)
     coords = np.column_stack(np.where(arr > 0))
     if coords.size > 0:
