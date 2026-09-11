@@ -1,4 +1,4 @@
-# Melatih CNN sederhana di MNIST dan menyimpan model ke ./models/mnist_cnn.h5
+# ./models/mnist_cnn.h5
 
 import os
 import tensorflow as tf
