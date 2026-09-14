@@ -30,11 +30,12 @@ def build_model(input_shape=(28, 28, 1), num_classes=10):
 def main():
     (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
 
-    # Normalisasi ke [0,1] dan reshape ke (28,28,1)
+    # Normalize pixel values to [0,1] and reshape to (28,28,1)
     x_train = (x_train.astype('float32') / 255.0)[..., None]
     x_test = (x_test.astype('float32') / 255.0)[..., None]
 
-    # Split a validation set manually (needed because datagen.flow() doesn't support validation_split)
+    # Split a validation set manually
+    # needed because ImageDataGenerator does not support validation_split here
     x_train, x_val, y_train, y_val = train_test_split(
         x_train, y_train, test_size=0.1, random_state=42
     )

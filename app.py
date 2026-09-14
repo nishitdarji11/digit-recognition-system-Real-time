@@ -30,17 +30,17 @@ def preprocess_image_from_base64(b64data: str) -> np.ndarray:
     else:
         arr = np.zeros((28, 28), dtype=np.uint8)
 
-    # Resize ke 20x20 sambil menjaga rasio
+    # Resize ke 20x20  aspeact ration
     img = Image.fromarray(arr)
     img.thumbnail((20, 20), Image.Resampling.LANCZOS)
 
-    # Buat kanvas 28x28 dan tempelkan di tengah (bounding-box center dulu)
+    # create 28*28 canvas
     canvas = Image.new('L', (28, 28), color=0)
     paste_x = (28 - img.width) // 2
     paste_y = (28 - img.height) // 2
     canvas.paste(img, (paste_x, paste_y))
 
-    # Re-center berdasarkan center of mass, sama seperti preprocessing asli MNIST
+    # Re-center it similarly to MNIST preprocessing
     arr = np.array(canvas).astype('float32')
     total_mass = arr.sum()
     if total_mass > 0:
