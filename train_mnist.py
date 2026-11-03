@@ -1,15 +1,3 @@
-"""Train the digit-recognition CNN with a modern pipeline.
-
-What changed compared with the old train_mnist.py
-  * tf.data + Keras preprocessing layers replace the deprecated ImageDataGenerator
-  * random stroke-thickness augmentation (thin and thick pens), because strokes drawn
-    on the web canvas are not the same width as the pen strokes in MNIST
-  * the model is saved in the current .keras format instead of the legacy .h5 format
-  * early stopping keeps the best epoch, and scikit-learn is no longer needed
-
-The architecture is IDENTICAL to before (225,034 parameters), so app.py, the
-browser demo and the documents all stay valid.
-"""
 import os
 
 import numpy as np
@@ -54,7 +42,7 @@ def get_data():
             (x_test, y_test))
 
 
-# ---- augmentation ---------------------------------------------------------
+#  augmentation 
 geometry = tf.keras.Sequential([
     layers.RandomRotation(10 / 360, fill_mode='constant', fill_value=0.0),
     layers.RandomTranslation(0.1, 0.1, fill_mode='constant', fill_value=0.0),
