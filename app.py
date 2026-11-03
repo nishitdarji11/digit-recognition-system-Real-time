@@ -7,7 +7,7 @@ import io, base64, re
 
 app = Flask(__name__)
 
-MODEL_PATH = 'models/mnist_cnn.h5'
+MODEL_PATH = 'models/mnist_cnn.keras'
 model = tf.keras.models.load_model(MODEL_PATH)
 
 
