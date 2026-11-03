@@ -1,10 +1,10 @@
-# MNIST Handwritten Digit Recognition - Flask + Realtime Canvas
+# MNIST Handwritten Digit Recognition - Flask + Real-Time Canvas
 
 [![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)](https://www.python.org/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.21-orange?logo=tensorflow)](https://www.tensorflow.org/)
 [![Flask](https://img.shields.io/badge/Flask-3.1-black?logo=flask)](https://flask.palletsprojects.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/nishitdarji11/digit-recognition-system-Real-time-?style=social)](https://github.com/nishitdarji11/digit-recognition-system-Real-time-)
+[![GitHub Stars](https://img.shields.io/github/stars/nishitdarji11/digit-recognition-system-Real-time?style=social)](https://github.com/nishitdarji11/digit-recognition-system-Real-time)
 
 An interactive web application for recognizing handwritten digits using a CNN model trained on the MNIST dataset.  
 Users can draw directly on a browser canvas, and the model will predict the digit in **real-time**.
@@ -24,8 +24,8 @@ Users can draw directly on a browser canvas, and the model will predict the digi
 
 1. **Clone the repository**
     ```bash
-    git clone [https://github.com/nishitdarji11/digit-recognition-system-Real-time-.git](https://github.com/nishitdarji11/digit-recognition-system-Real-time-.git)
-    cd digit-recognition-system-Real-time-
+    git clone [https://github.com/nishitdarji11/digit-recognition-system-Real-time.git](https://github.com/nishitdarji11/digit-recognition-system-Real-time.git)
+    cd digit-recognition-system-Real-time
     ```
 
 2. **Create a virtual environment & install dependencies**
