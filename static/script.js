@@ -7,7 +7,7 @@ const predictBtn = document.getElementById('predictBtn');
 const predEl = document.getElementById('pred');
 const barsEl = document.getElementById('bars');
 
-// Init canvas: putih, gambar dengan warna hitam
+// Initialize canvas : White Background ,draw in black
 ctx.fillStyle = '#fff';
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 ctx.lineCap = 'round';
